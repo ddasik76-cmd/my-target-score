@@ -79,6 +79,8 @@ main{margin-left:230px}.nav button{color:#262626;font-weight:600;border:1px soli
 @media(max-width:350px){.projection-controls{grid-template-columns:1fr}}
 @media(max-width:760px){.non-grid{grid-template-columns:1fr}.non-fields{grid-template-columns:1fr 1fr}.final-score-grid{grid-template-columns:1fr 1fr}.final-score.total{grid-column:1/-1}.rank-result{grid-template-columns:1fr 1fr}}
 @media(max-width:350px){.final-score-grid,.rank-result{grid-template-columns:1fr}.final-score.total{grid-column:auto}.non-save{align-items:stretch;flex-direction:column}.non-save .btn{width:100%}}
+.app-info{margin:0 34px 34px 254px;max-width:1192px;padding:20px 22px;border:1px solid #dbeafe;border-radius:16px;background:#f8fbff;color:#475569;box-shadow:0 3px 12px #1e3a5f08}.app-info-main{display:grid;grid-template-columns:38px minmax(0,1fr);gap:12px}.app-info-icon{display:grid;place-items:center;width:38px;height:38px;border-radius:11px;background:#dbeafe;color:var(--blue);font-weight:900}.app-info p{margin:0 0 7px;line-height:1.65}.app-info .privacy{color:#294365;font-weight:700}.app-info-meta{display:flex;flex-wrap:wrap;gap:7px 20px;margin:13px 0 0 50px;padding-top:13px;border-top:1px solid #dbeafe;color:var(--text);font-size:13px;font-weight:750}.app-info a{color:var(--blue);text-decoration:none}.app-info a:hover{text-decoration:underline}
+@media(max-width:640px){.app-info{margin:8px 16px 24px;padding:17px}.app-info-main{grid-template-columns:32px minmax(0,1fr);gap:10px}.app-info-icon{width:32px;height:32px}.app-info p{font-size:13px}.app-info-meta{display:grid;gap:5px;margin-left:42px;font-size:12px}}
 </style>
 </head>
 <body>
@@ -87,6 +89,15 @@ main{margin-left:230px}.nav button{color:#262626;font-weight:600;border:1px soli
   <div class="drawer-overlay" id="drawerOverlay" hidden></div>
   <aside class="side" id="drawer"><div class="side-head"><div class="brand">내 목표점수</div><button id="drawerClose" aria-label="메뉴 닫기">×</button></div><nav class="nav"></nav><button class="guide-menu" id="showGuide">ⓘ 사용 안내</button><div class="side-tools"><button id="exportData">↓ 데이터 백업</button><button id="importData">↑ 복원</button><small>성적 정보가 포함된 백업 파일은 다른 사람과 공유하지 마세요.</small></div></aside>
   <main id="content"></main>
+  <footer class="app-info" aria-label="앱 소개 및 개인정보 안내">
+    <div class="app-info-main"><span class="app-info-icon" aria-hidden="true">i</span><div>
+      <p>이 앱은 학교 현장에서 학생들의 자기주도적인 학습과 진로 설계를 돕기 위해 만든 무료 교육용 도구입니다.</p>
+      <p class="privacy">학생이 입력한 성적 정보는 서버에 저장되지 않으며, 운영자는 어떠한 개인정보도 수집하지 않습니다.</p>
+      <p>유용하게 사용하셨다면 주변 선생님들과 함께 나눠 주세요.</p>
+      <p>사용 후기나 개선 의견도 언제든 환영합니다.</p>
+    </div></div>
+    <div class="app-info-meta"><span>만든 사람 | 팔봉중학교 진로교사 이제중</span><span>Instagram | <a href="https://www.instagram.com/aijinro/" target="_blank" rel="noopener noreferrer">@aijinro</a></span></div>
+  </footer>
 </div>
 <input id="backupFile" type="file" accept=".json,application/json" hidden>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
